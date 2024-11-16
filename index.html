@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מחשבון קמח לפי גודל תבנית</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>מחשבון קמח לפי גודל תבנית</h1>
+
+    <!-- מידות התבנית -->
+    <h2>מידות התבנית בס"מ</h2>
+    <label>אורך (ס"מ):</label>
+    <input type="number" id="length" placeholder="הכנס אורך"><br>
+    <label>רוחב (ס"מ):</label>
+    <input type="number" id="width" placeholder="הכנס רוחב"><br>
+    <label>עומק (ס"מ):</label>
+    <input type="number" id="height" placeholder="הכנס עומק"><br>
+    <button onclick="calculateVolume()">חשב נפח</button>
+    <p>נפח התבנית: <span id="volume"></span> סמ"ק</p>
+
+    <!-- סוג תבנית -->
+    <h2>סוג תבנית</h2>
+    <select id="panType">
+        <option value="open">תבנית לחם פתוחה</option>
+        <option value="closed">תבנית קסטן סגורה</option>
+    </select>
+
+    <!-- סוג הלחם -->
+    <h2>סוג הלחם</h2>
+    <select id="breadType">
+        <option value="yeast">שמרים</option>
+        <option value="sourdough">מחמצת</option>
+    </select>
+
+    <!-- משקל הקמח הדרוש -->
+    <h2>משקל הקמח למתכון</h2>
+    <button onclick="calculateFlourWeight()">חשב משקל קמח</button>
+    <p>משקל הקמח: <span id="flourWeight"></span> גרם</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
