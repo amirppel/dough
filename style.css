@@ -11,7 +11,7 @@ h1 {
 
 .input-group {
     display: flex;
-    justify-content: flex-end; /* יישור לימין */
+    justify-content: center; /* ממקם את כל השדה במרכז המסך */
     align-items: center;
     margin: 10px 0;
     direction: rtl; /* תומך בטקסט מימין לשמאל */
@@ -20,9 +20,7 @@ h1 {
 label {
     margin-left: 10px; /* ריווח בין התווית לשדה */
     text-align: right; /* יישור התווית לימין */
-    width: auto; /* התאמה אוטומטית לגודל הטקסט */
 }
-
 input, select, button {
     margin: 10px 0;
     padding: 8px;
