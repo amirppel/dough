@@ -11,15 +11,16 @@ h1 {
 
 .input-group {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* יישור לימין */
     align-items: center;
     margin: 10px 0;
+    direction: rtl; /* תומך בטקסט מימין לשמאל */
 }
 
 label {
-    margin-left: 10px;
-    text-align: right;
-    width: 100px;
+    margin-left: 10px; /* ריווח בין התווית לשדה */
+    text-align: right; /* יישור התווית לימין */
+    width: auto; /* התאמה אוטומטית לגודל הטקסט */
 }
 
 input, select, button {
