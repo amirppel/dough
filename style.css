@@ -2,7 +2,24 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
-    background-color: #f4f4f9;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+label {
+    margin-left: 10px;
+    text-align: right;
+    width: 100px;
 }
 
 input, select, button {
@@ -11,17 +28,26 @@ input, select, button {
     font-size: 16px;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
+input, select {
+    text-align: right;
+    direction: rtl;
+}
+
+.calculate-btn {
+    background-color: #FFEC3B;
+    color: black;
     border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 18px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
+.calculate-btn:hover {
+    background-color: #E6D636;
 }
 
-h1 {
-    color: #333;
+p {
+    font-size: 18px;
+    margin: 10px 0;
 }
