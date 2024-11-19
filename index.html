@@ -11,14 +11,19 @@
 
     <!-- מידות התבנית -->
     <h2>מידות התבנית בס"מ</h2>
-    <label>אורך (ס"מ):</label>
-    <input type="number" id="length" placeholder="הכנס אורך"><br>
-    <label>רוחב (ס"מ):</label>
-    <input type="number" id="width" placeholder="הכנס רוחב"><br>
-    <label>עומק (ס"מ):</label>
-    <input type="number" id="height" placeholder="הכנס עומק"><br>
-    <button onclick="calculateVolume()">חשב נפח</button>
-    <p>נפח התבנית: <span id="volume"></span> סמ"ק</p>
+    <div class="input-group">
+        <label>אורך (ס"מ):</label>
+        <input type="number" id="length" placeholder="הכנס אורך" oninput="calculateVolume()">
+    </div>
+    <div class="input-group">
+        <label>רוחב (ס"מ):</label>
+        <input type="number" id="width" placeholder="הכנס רוחב" oninput="calculateVolume()">
+    </div>
+    <div class="input-group">
+        <label>עומק (ס"מ):</label>
+        <input type="number" id="height" placeholder="הכנס עומק" oninput="calculateVolume()">
+    </div>
+    <p>נפח התבנית: <span id="volume">0</span> סמ"ק</p>
 
     <!-- סוג תבנית -->
     <h2>סוג תבנית</h2>
@@ -36,8 +41,8 @@
 
     <!-- משקל הקמח הדרוש -->
     <h2>משקל הקמח למתכון</h2>
-    <button onclick="calculateFlourWeight()">חשב משקל קמח</button>
-    <p>משקל הקמח: <span id="flourWeight"></span> גרם</p>
+    <button onclick="calculateFlourWeight()" class="calculate-btn">חשב משקל קמח</button>
+    <p>משקל הקמח: <span id="flourWeight">0</span> גרם</p>
 
     <script src="script.js"></script>
 </body>
