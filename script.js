@@ -37,3 +37,21 @@ function calculateFlourWeight() {
 function roundToFive(value) {
     return Math.round(value / 5) * 5;
 }
+
+let clickCount = 0;
+
+function trackClick() {
+    clickCount++;
+
+    // שליחת הנתונים ל-Google Sheets
+    fetch('YOUR_GOOGLE_SCRIPT_URL', {
+        method: 'POST',
+        body: JSON.stringify({ clickCount: clickCount }),
+        headers: { 'Content-Type': 'application/json' }
+    })
+    .then(response => response.text())
+    .then(data => console.log('Data sent:', data))
+    .catch(error => console.error('Error:', error));
+
+    calculateFlourWeight(); // קריאה לפונקציה המקורית
+}
