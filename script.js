@@ -44,7 +44,7 @@ function trackClick() {
     clickCount++;
 
     // שליחת הנתונים ל-Google Sheets
-    fetch('YOUR_GOOGLE_SCRIPT_URL', {
+    fetch('https://script.google.com/macros/s/AKfycbzO-fqD4j8fMG4h4w1KdvUx6ucNQ6gLRc2xkgAV9Yc9Qcn8WdB6YKe06PYK5josoaZvew/exec', {
         method: 'POST',
         body: JSON.stringify({ clickCount: clickCount }),
         headers: { 'Content-Type': 'application/json' }
