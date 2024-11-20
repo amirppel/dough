@@ -27,7 +27,7 @@ function calculateFlourWeight() {
     if (panType === "open") {
         flourPercentage = (breadType === "yeast") ? 0.30 : 0.35;
     } else {
-        flourPercentage = (breadType === "yeast") ? 0.21 : 0.22;
+        flourPercentage = (breadType === "yeast") ? 0.21 : 0.23;
     }
 
     const flourWeight = volume * flourPercentage;
