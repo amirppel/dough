@@ -44,14 +44,15 @@ function trackClick() {
     clickCount++;
 
     // שליחת הנתונים ל-Google Sheets
-    fetch('https://script.google.com/macros/s/AKfycbzO-fqD4j8fMG4h4w1KdvUx6ucNQ6gLRc2xkgAV9Yc9Qcn8WdB6YKe06PYK5josoaZvew/exec', {
-        method: 'POST',
-        body: JSON.stringify({ clickCount: clickCount }),
-        headers: { 'Content-Type': 'application/json' }
+    fetch('https://script.google.com/macros/library/d/1tiTdHyIMfFgywAM9pYI2b4HelRF2Ymr_FTet2mfa3SoYh41nPSg1ct2i/1', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ clickCount: clickCount })
     })
     .then(response => response.text())
-    .then(data => console.log('Data sent:', data))
+    .then(data => console.log('Response from server:', data))
     .catch(error => console.error('Error:', error));
+
 
     calculateFlourWeight(); // קריאה לפונקציה המקורית
 }
